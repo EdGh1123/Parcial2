@@ -1,0 +1,27 @@
+﻿.flexbox-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+    .flexbox-container > div {
+        width: 30%;
+        padding: 10px;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+        .flexbox-container > div:first-child {
+            margin-top: 5%;
+    margin-right: 157px;
+}
+
+.flexbox {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 100%;
+    background: #808080;
+    color: #333;
+}
