@@ -127,7 +127,6 @@ C:\Users\Usuario\source\repos\Parcial2\ParcialSegundoCorte\bin\roslyn\vbc.rsp
 C:\Users\Usuario\source\repos\Parcial2\ParcialSegundoCorte\bin\roslyn\VBCSCompiler.exe
 C:\Users\Usuario\source\repos\Parcial2\ParcialSegundoCorte\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Usuario\source\repos\Parcial2\ParcialSegundoCorte\bin\Antlr3.Runtime.dll
-C:\Users\Usuario\source\repos\Parcial2\ParcialSegundoCorte\bin\AspNet.ScriptManager.bootstrap.dll
 C:\Users\Usuario\source\repos\Parcial2\ParcialSegundoCorte\bin\AspNet.ScriptManager.jQuery.dll
 C:\Users\Usuario\source\repos\Parcial2\ParcialSegundoCorte\bin\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\Usuario\source\repos\Parcial2\ParcialSegundoCorte\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
