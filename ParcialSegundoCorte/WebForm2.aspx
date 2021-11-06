@@ -6,105 +6,43 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
         
        <div class="card text-center">
   <div class="card-header">
-    Featured
-  </div>
+      Cliente</div>
   <div class="card-body">
   
 
-            
-            
-            <asp:DataList ID="DataList1" runat="server" CellPadding="3" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" GridLines="Horizontal" Width="1565px">
-                    <AlternatingItemStyle BackColor="#F7F7F7" />
-                    <FooterStyle BackColor="#000000" ForeColor="#4A3C8C" />
+             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="cedula" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+          <Columns>
+              <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+              <asp:BoundField DataField="cedula" HeaderText="cedula" ReadOnly="True" SortExpression="cedula" />
+              <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+              <asp:BoundField DataField="apellido" HeaderText="apellido" SortExpression="apellido" />
+              <asp:BoundField DataField="direccion" HeaderText="direccion" SortExpression="direccion" />
+              <asp:BoundField DataField="telFijo" HeaderText="telFijo" SortExpression="telFijo" />
+              <asp:BoundField DataField="celular" HeaderText="celular" SortExpression="celular" />
+              <asp:BoundField DataField="correo" HeaderText="correo" SortExpression="correo" />
+              <asp:BoundField DataField="edad" HeaderText="edad" SortExpression="edad" />
+              <asp:BoundField DataField="sexo" HeaderText="sexo" SortExpression="sexo" />
+              <asp:BoundField DataField="fecha" HeaderText="fecha" SortExpression="fecha" />
+              <asp:BoundField DataField="formaPago" HeaderText="formaPago" SortExpression="formaPago" />
+          </Columns>
+                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                 <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                 <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                 <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                 <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                 <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                 <SortedDescendingHeaderStyle BackColor="#242121" />
+      </asp:GridView>
 
-                    <HeaderStyle BackColor="#4A3C8C" 
-                     Font-Bold="True" ForeColor="#F7F7F7" />
-                    <ItemStyle 
-                     BackColor="#D1F3FF" 
-                     ForeColor="#000000" />
-                    <ItemTemplate>
-
-
-                        <table class="auto-style1" border="1">
-                            <tr>
-                    <td colspan="2">Cliente</td>
-                </tr>
-                <tr>
-                    <td>Cedula</td>
-                    <td><%#Eval("Cedula") %> </td>
-                
-                </tr>
-                            <tr>
-                    <td>Nombre</td>
-                    <td><%#Eval("Nombre") %> </td>
-                    
-                </tr>
-                              <tr>
-                    <td>Apellido</td>
-                    <td><%#Eval("Apellido") %> </td>
-                 
-                </tr>
-                              <tr>
-                    <td>Direccion</td>
-                    <td><%#Eval("Direccion") %> </td>
-                    
-                </tr>
-  <tr>
-                    <td>Telefono</td>
-                    <td><%#Eval("TelFijo") %> </td>
-                  
-                </tr>
-                            <tr>
-                    <td>Celular</td>
-                    <td><%#Eval("Celular") %> </td>
-                   
-                </tr>
-                            <tr>
-                    <td>Correo</td>
-                    <td><%#Eval("Correo") %> </td>
-        
-                </tr>
-                             <tr>
-                    <td>Edad</td>
-                    <td><%#Eval("Edad") %> </td>
-  
-                </tr>
-                             <tr>
-                    <td>Fecha</td>
-                    <td><%#Eval("Fecha") %> </td>
-  
-                </tr>
-                             <tr>
-                    <td>Sexo</td>
-                    <td><%#Eval("Sexo") %> </td>
-
-                </tr>
-                             <tr>
-                    <td>Forma de Pago</td>
-                    <td><%#Eval("formaPago") %> </td>
-
-                </tr>
-              
-            </table>
-
-                    </ItemTemplate>
-
-                    <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-
-                </asp:DataList>
-
-
+              <br />
+         <br />
            <div class="card text-center">
   <div class="card-header">
     Vendedores
@@ -113,78 +51,59 @@
             
   <div class="card-body text-center">
 
-                <br />
-                VENDEDORES<asp:DataList ID="DataList2" runat="server" CellPadding="3" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" GridLines="Horizontal" Width="775px">
-                    <AlternatingItemStyle BackColor="#F7F7F7" />
-                    <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-                    <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-                    <ItemStyle BackColor="#FFC7C7 " ForeColor="#00000" />
-                    <ItemTemplate>
-
-                        <table class="auto-style1" border="1">
-                            <tr>
-                    <td colspan="2">Vendedor</td>
-                </tr>
-                <tr>
-                    <td>Cedula</td>
-                    <td><%#Eval("Cedula") %> </td>
-                
-                </tr>
-                            <tr>
-                    <td>Nombre</td>
-                    <td><%#Eval("Nombre") %> </td>
-                    
-                </tr>
-                              <tr>
-                    <td>Apellido</td>
-                    <td><%#Eval("Apellido") %> </td>
-                 
-                </tr>
-                              <tr>
-                    <td>Direccion</td>
-                    <td><%#Eval("Direccion") %> </td>
-                    
-                </tr>
-  <tr>
-                    <td>Telefono</td>
-                    <td><%#Eval("TelFijo") %> </td>
-                  
-                </tr>
-                            <tr>
-                    <td>Celular</td>
-                    <td><%#Eval("Celular") %> </td>
-                   
-                </tr>
-                            <tr>
-                    <td>Correo</td>
-                    <td><%#Eval("Correo") %> </td>
-        
-                </tr>
-                             <tr>
-                    <td>Edad</td>
-                    <td><%#Eval("Edad") %> </td>
-  
-                </tr>
-                             <tr>
-                    <td>Fecha</td>
-                    <td><%#Eval("Fecha") %> </td>
-  
-                </tr>
-                             <tr>
-                    <td>Sexo</td>
-                    <td><%#Eval("Sexo") %> </td>
-
-                </tr>
-                            
-              
-            </table>
-
-
-                       </ItemTemplate>
-
-                    <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-
-                </asp:DataList>
+      <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="cedula" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+          <Columns>
+              <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+              <asp:BoundField DataField="cedula" HeaderText="cedula" ReadOnly="True" SortExpression="cedula" />
+              <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+              <asp:BoundField DataField="apellido" HeaderText="apellido" SortExpression="apellido" />
+              <asp:BoundField DataField="direccion" HeaderText="direccion" SortExpression="direccion" />
+              <asp:BoundField DataField="telFijo" HeaderText="telFijo" SortExpression="telFijo" />
+              <asp:BoundField DataField="celular" HeaderText="celular" SortExpression="celular" />
+              <asp:BoundField DataField="correo" HeaderText="correo" SortExpression="correo" />
+              <asp:BoundField DataField="edad" HeaderText="edad" SortExpression="edad" />
+              <asp:BoundField DataField="sexo" HeaderText="sexo" SortExpression="sexo" />
+              <asp:BoundField DataField="fecha" HeaderText="fecha" SortExpression="fecha" />
+          </Columns>
+          <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+          <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+          <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+          <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+          <SortedAscendingCellStyle BackColor="#F7F7F7" />
+          <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+          <SortedDescendingCellStyle BackColor="#E5E5E5" />
+          <SortedDescendingHeaderStyle BackColor="#242121" />
+      </asp:GridView>         
+      <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Vendedor] WHERE [cedula] = @cedula" InsertCommand="INSERT INTO [Vendedor] ([cedula], [nombre], [apellido], [direccion], [telFijo], [celular], [correo], [edad], [sexo], [fecha]) VALUES (@cedula, @nombre, @apellido, @direccion, @telFijo, @celular, @correo, @edad, @sexo, @fecha)" SelectCommand="SELECT * FROM [Vendedor]" UpdateCommand="UPDATE [Vendedor] SET [nombre] = @nombre, [apellido] = @apellido, [direccion] = @direccion, [telFijo] = @telFijo, [celular] = @celular, [correo] = @correo, [edad] = @edad, [sexo] = @sexo, [fecha] = @fecha WHERE [cedula] = @cedula">
+          <DeleteParameters>
+              <asp:Parameter Name="cedula" Type="Int32" />
+          </DeleteParameters>
+          <InsertParameters>
+              <asp:Parameter Name="cedula" Type="Int32" />
+              <asp:Parameter Name="nombre" Type="String" />
+              <asp:Parameter Name="apellido" Type="String" />
+              <asp:Parameter Name="direccion" Type="String" />
+              <asp:Parameter Name="telFijo" Type="String" />
+              <asp:Parameter Name="celular" Type="String" />
+              <asp:Parameter Name="correo" Type="String" />
+              <asp:Parameter Name="edad" Type="String" />
+              <asp:Parameter Name="sexo" Type="String" />
+              <asp:Parameter DbType="Date" Name="fecha" />
+          </InsertParameters>
+          <UpdateParameters>
+              <asp:Parameter Name="nombre" Type="String" />
+              <asp:Parameter Name="apellido" Type="String" />
+              <asp:Parameter Name="direccion" Type="String" />
+              <asp:Parameter Name="telFijo" Type="String" />
+              <asp:Parameter Name="celular" Type="String" />
+              <asp:Parameter Name="correo" Type="String" />
+              <asp:Parameter Name="edad" Type="String" />
+              <asp:Parameter Name="sexo" Type="String" />
+              <asp:Parameter DbType="Date" Name="fecha" />
+              <asp:Parameter Name="cedula" Type="Int32" />
+          </UpdateParameters>
+      </asp:SqlDataSource>
+      <br />
                 <br />
          </div>
   <div class="card-footer text-muted">
@@ -201,68 +120,153 @@
   <div class="card-body text-center">
     
 
-  
+      <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource3" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+          <Columns>
+              <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+              <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+              <asp:BoundField DataField="npedido" HeaderText="npedido" SortExpression="npedido" />
+              <asp:BoundField DataField="producto" HeaderText="producto" SortExpression="producto" />
+              <asp:BoundField DataField="cantidad" HeaderText="cantidad" SortExpression="cantidad" />
+              <asp:BoundField DataField="estado" HeaderText="estado" SortExpression="estado" />
+              <asp:BoundField DataField="vendedor" HeaderText="vendedor" SortExpression="vendedor" />
+              <asp:BoundField DataField="valorTotal" HeaderText="valorTotal" SortExpression="valorTotal" />
+          </Columns>
+          <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+          <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+          <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+          <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+          <SortedAscendingCellStyle BackColor="#F7F7F7" />
+          <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+          <SortedDescendingCellStyle BackColor="#E5E5E5" />
+          <SortedDescendingHeaderStyle BackColor="#242121" />
+      </asp:GridView>
 
 
-             <asp:DataList ID="DataList3" runat="server" Width="1572px" >
-                    <AlternatingItemStyle BackColor="#F7F7F7" />
-                    <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-                    <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-                    <ItemStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
-                    <ItemTemplate>
-                        <table class="auto-style1" border="1">
-                            <tr>
-                    <td colspan="2">Pedidos</td>
-                </tr>
-                <tr>
-                    <td>ID</td>
-                    <td><%#Eval("Id") %> </td>
-                
-                </tr>
-                       <tr>
-                    <td>Numero de pedido</td>
-                    <td><%#Eval("npedido") %> </td>
-                
-                </tr>   
-                            <tr>
-                    <td>Producto</td>
-                    <td><%#Eval("Producto") %> </td>
-                
-                </tr>
-                       <tr>
-                    <td>Cantidad</td>
-                    <td><%#Eval("cantidad") %> </td>
-                
-                </tr> 
-             <tr>
-                    <td>Estado del Pedido</td>
-                    <td><%#Eval("estado") %> </td>
-                
-                </tr>
-                       <tr>
-                    <td>Nombre del Vendedor</td>
-                    <td><%#Eval("vendedor") %> </td>
-                
-                </tr> 
-                       <tr>
-                    <td>Total del pedido</td>
-                    <td><%#Eval("ValorTotal") %> </td>
-                
-                </tr> 
-            </table>
+             <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Pedido] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Pedido] ([npedido], [producto], [cantidad], [estado], [vendedor], [valorTotal]) VALUES (@npedido, @producto, @cantidad, @estado, @vendedor, @valorTotal)" SelectCommand="SELECT * FROM [Pedido]" UpdateCommand="UPDATE [Pedido] SET [npedido] = @npedido, [producto] = @producto, [cantidad] = @cantidad, [estado] = @estado, [vendedor] = @vendedor, [valorTotal] = @valorTotal WHERE [Id] = @Id">
+                 <DeleteParameters>
+                     <asp:Parameter Name="Id" Type="Int32" />
+                 </DeleteParameters>
+                 <InsertParameters>
+                     <asp:Parameter Name="npedido" Type="String" />
+                     <asp:Parameter Name="producto" Type="String" />
+                     <asp:Parameter Name="cantidad" Type="String" />
+                     <asp:Parameter Name="estado" Type="String" />
+                     <asp:Parameter Name="vendedor" Type="String" />
+                     <asp:Parameter Name="valorTotal" Type="String" />
+                 </InsertParameters>
+                 <UpdateParameters>
+                     <asp:Parameter Name="npedido" Type="String" />
+                     <asp:Parameter Name="producto" Type="String" />
+                     <asp:Parameter Name="cantidad" Type="String" />
+                     <asp:Parameter Name="estado" Type="String" />
+                     <asp:Parameter Name="vendedor" Type="String" />
+                     <asp:Parameter Name="valorTotal" Type="String" />
+                     <asp:Parameter Name="Id" Type="Int32" />
+                 </UpdateParameters>
+      </asp:SqlDataSource>
 
-                       
-                        <br></br> 
-                    </ItemTemplate>
-                    <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-                </asp:DataList>
+
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Cliente] WHERE [cedula] = @cedula" InsertCommand="INSERT INTO [Cliente] ([cedula], [nombre], [apellido], [direccion], [telFijo], [celular], [correo], [edad], [sexo], [fecha], [formaPago]) VALUES (@cedula, @nombre, @apellido, @direccion, @telFijo, @celular, @correo, @edad, @sexo, @fecha, @formaPago)" SelectCommand="SELECT * FROM [Cliente]" UpdateCommand="UPDATE [Cliente] SET [nombre] = @nombre, [apellido] = @apellido, [direccion] = @direccion, [telFijo] = @telFijo, [celular] = @celular, [correo] = @correo, [edad] = @edad, [sexo] = @sexo, [fecha] = @fecha, [formaPago] = @formaPago WHERE [cedula] = @cedula">
+                 <DeleteParameters>
+                     <asp:Parameter Name="cedula" Type="Int32" />
+                 </DeleteParameters>
+                 <InsertParameters>
+                     <asp:Parameter Name="cedula" Type="Int32" />
+                     <asp:Parameter Name="nombre" Type="String" />
+                     <asp:Parameter Name="apellido" Type="String" />
+                     <asp:Parameter Name="direccion" Type="String" />
+                     <asp:Parameter Name="telFijo" Type="String" />
+                     <asp:Parameter Name="celular" Type="String" />
+                     <asp:Parameter Name="correo" Type="String" />
+                     <asp:Parameter Name="edad" Type="String" />
+                     <asp:Parameter Name="sexo" Type="String" />
+                     <asp:Parameter Name="fecha" Type="String" />
+                     <asp:Parameter Name="formaPago" Type="String" />
+                 </InsertParameters>
+                 <UpdateParameters>
+                     <asp:Parameter Name="nombre" Type="String" />
+                     <asp:Parameter Name="apellido" Type="String" />
+                     <asp:Parameter Name="direccion" Type="String" />
+                     <asp:Parameter Name="telFijo" Type="String" />
+                     <asp:Parameter Name="celular" Type="String" />
+                     <asp:Parameter Name="correo" Type="String" />
+                     <asp:Parameter Name="edad" Type="String" />
+                     <asp:Parameter Name="sexo" Type="String" />
+                     <asp:Parameter Name="fecha" Type="String" />
+                     <asp:Parameter Name="formaPago" Type="String" />
+                     <asp:Parameter Name="cedula" Type="Int32" />
+                 </UpdateParameters>
+      </asp:SqlDataSource>
+
+
       </div>
   <div class="card-footer text-muted">
    Pedido
   </div>
+
+
+
+
+
+
+
+            <br />
+         <br />
+
+         
+        
+       <div class="card text-center">
+  <div class="card-header">
+      Facturas</div>
+  <div class="card-body">
+  
+      
+
+             <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource4" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+                 <Columns>
+                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                     <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
+                     <asp:BoundField DataField="Vendedor" HeaderText="Vendedor" SortExpression="Vendedor" />
+                     <asp:BoundField DataField="Comprador" HeaderText="Comprador" SortExpression="Comprador" />
+                     <asp:BoundField DataField="ValorTotal" HeaderText="ValorTotal" SortExpression="ValorTotal" />
+                 </Columns>
+                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                 <HeaderStyle BackColor="#333333" BorderColor="#333333" Font-Bold="True" ForeColor="White" />
+                 <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                 <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                 <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                 <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                 <SortedDescendingHeaderStyle BackColor="#242121" />
+      </asp:GridView>
+      <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Factura] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Factura] ([Id], [Vendedor], [Comprador], [ValorTotal]) VALUES (@Id, @Vendedor, @Comprador, @ValorTotal)" SelectCommand="SELECT * FROM [Factura]" UpdateCommand="UPDATE [Factura] SET [Vendedor] = @Vendedor, [Comprador] = @Comprador, [ValorTotal] = @ValorTotal WHERE [Id] = @Id">
+          <DeleteParameters>
+              <asp:Parameter Name="Id" Type="Int32" />
+          </DeleteParameters>
+          <InsertParameters>
+              <asp:Parameter Name="Id" Type="Int32" />
+              <asp:Parameter Name="Vendedor" Type="String" />
+              <asp:Parameter Name="Comprador" Type="String" />
+              <asp:Parameter Name="ValorTotal" Type="String" />
+          </InsertParameters>
+          <UpdateParameters>
+              <asp:Parameter Name="Vendedor" Type="String" />
+              <asp:Parameter Name="Comprador" Type="String" />
+              <asp:Parameter Name="ValorTotal" Type="String" />
+              <asp:Parameter Name="Id" Type="Int32" />
+          </UpdateParameters>
+      </asp:SqlDataSource>
+            
+           <div class="card text-center">
+  <div class="card-header">
+    Facturas
+  </div>
+
 </div>
          </div>
 </div>
+
+
     </form>
 </body>
 </html>
