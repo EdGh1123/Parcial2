@@ -615,7 +615,7 @@ namespace ParcialSegundoCorte
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label Label55;
 
         /// <summary>
         /// Control DropDownList2.

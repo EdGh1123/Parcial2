@@ -34,7 +34,7 @@ namespace ParcialSegundoCorte
 
             {
 
-                cmd.Parameters.Add("@id", SqlDbType.VarChar, 50).Value = Label9.Text;
+                cmd.Parameters.Add("@id", SqlDbType.VarChar, 50).Value = Label55.Text;
                 cmd.Parameters.Add("@comprador", SqlDbType.VarChar, 50).Value = tnombre.Text + tapellido.Text;
                 cmd.Parameters.Add("@vendedor", SqlDbType.VarChar, 50).Value = tnombre0.Text + tapellido0.Text;
                 cmd.Parameters.Add("@valorTotal", SqlDbType.VarChar, 50).Value = Label2.Text;
@@ -103,7 +103,7 @@ namespace ParcialSegundoCorte
             conn.Open();
             int id = Convert.ToInt32(cmd2.ExecuteScalar());
             int numero = random.Next(1, 10);
-            Label9.Text = "" + (id) + numero;
+            Label55.Text = "" + (id) + numero;
             conn.Close();
 
             SqlDataAdapter sa = new SqlDataAdapter("SELECT * FROM Producto", conn);
@@ -171,7 +171,7 @@ namespace ParcialSegundoCorte
             using (SqlCommand cmd = new SqlCommand(insertQuery2, conn))
 
             {
-                cmd.Parameters.Add("@npedido", SqlDbType.VarChar, 50).Value = Label9.Text;
+                cmd.Parameters.Add("@npedido", SqlDbType.VarChar, 50).Value = Label55.Text;
                 cmd.Parameters.Add("@producto", SqlDbType.VarChar, 50).Value = DropDownList2.SelectedValue;
                 cmd.Parameters.Add("@cantidad", SqlDbType.VarChar, 50).Value = TextBox1.Text;
                 cmd.Parameters.Add("@estado", SqlDbType.VarChar, 50).Value = "pendiente";
@@ -208,7 +208,7 @@ namespace ParcialSegundoCorte
 
             {
 
-                cmd.Parameters.Add("@id", SqlDbType.VarChar, 50).Value = Label9.Text;
+                cmd.Parameters.Add("@id", SqlDbType.VarChar, 50).Value = Label55.Text;
                 cmd.Parameters.Add("@comprador", SqlDbType.VarChar, 50).Value = DropDownList3.SelectedValue;
                 cmd.Parameters.Add("@vendedor", SqlDbType.VarChar, 50).Value = DropDownList4.SelectedValue;
                 cmd.Parameters.Add("@valorTotal", SqlDbType.VarChar, 50).Value = Label2.Text;
@@ -228,7 +228,7 @@ namespace ParcialSegundoCorte
             conn.Open();
             int id = Convert.ToInt32(cmd.ExecuteScalar());
             int numero = random.Next(1, 9000);
-            Label9.Text = "" + (id)+ numero;
+            Label55.Text = "" + (id)+ numero;
             conn.Close();
            
         }
@@ -243,8 +243,8 @@ namespace ParcialSegundoCorte
 
                 var random = new Random();
             
-                String sum = Label9.Text + random;
-                cmd.Parameters.Add("@id", SqlDbType.VarChar, 50).Value = Label9.Text;
+                String sum = Label55.Text + random;
+                cmd.Parameters.Add("@id", SqlDbType.VarChar, 50).Value = Label55.Text;
                 cmd.Parameters.Add("@comprador", SqlDbType.VarChar, 50).Value = DropDownList3.SelectedValue;
                 cmd.Parameters.Add("@vendedor", SqlDbType.VarChar, 50).Value = DropDownList4.SelectedValue;
                 cmd.Parameters.Add("@valorTotal", SqlDbType.VarChar, 50).Value = Label2.Text;
